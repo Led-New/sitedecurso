@@ -1,44 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+:root {
     --branco-principal: #FFFFFF;
     --cinza-secudario: #C0C0C0;
-
     --butao-azul: #167BF7;
-
-    --cor-de-fundo:#00030C;
-
-    --fonte-principal:"Inter", sans-serif;
-
-    --butao_efeito:  #4096ff;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: "Inter", sans-serif;
+    --butao_efeito: #4096ff;
 }
-body{
+
+body {
     background-color: var(--cor-de-fundo);
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
-.principal{
+
+.principal {
     background-image: url("img/Background.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover; /* Ajustado para cover */
     align-items: center;
     text-align: center;
 }
-.conteiner{
+
+.conteiner {
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
 }
-.conteiner_caixa{
+
+.conteiner_caixa {
     margin: 0 6em;
 }
-.conteiner_butao{
+
+.conteiner_butao {
     background-color: var(--butao-azul);
     border-radius: 5px;
     padding: 1em;
@@ -47,89 +49,144 @@ body{
     display: block;
     margin-bottom: 1em;
 }
-.butao_secudario{ 
+
+.butao_secudario {
     background-color: transparent;
     border: 2px solid var(--branco-principal);
     text-decoration: none;
 }
-.conteiner_img{
+
+.conteiner_img {
     margin: 1em 0em 2em 0em;
+    max-width: 100%;
+    height: auto;
 }
-.conteiner_titulo{
+
+.conteiner_titulo {
     font-size: 28px;
     font-weight: 700;
 }
-.conteiner_P{
+
+.conteiner_P {
     font-size: 12px;
     color: var(--cinza-secudario);
 }
-.secundario_imagen{
+
+.secundario_imagen {
     width: 80%;
 }
-.secundario{
+
+.secundario {
     align-items: center;
     margin: 0 10em;
 }
-.descricao_titulo{
+
+.descricao_titulo {
     font-weight: 700;
     font-size: 48px;
     color: var(--branco-principal);
     margin-bottom: 0.1em;
 }
-.descricao_P{
+
+.descricao_P {
     color: var(--cinza-secudario);
 }
-.secundario_butao{
+
+.secundario_butao {
     display: inline-block;
     margin-top: 1em;
 }
-.conteiner_descricao{
+
+.conteiner_descricao {
     padding: 2em;
 }
-.dispositivo{
+
+.dispositivo {
     text-align: center;
 }
-.dispositivo_titulo{
+
+.dispositivo_titulo {
     font-size: 48px;
 }
-.dispositivo_lista{
+
+.dispositivo_lista {
     display: flex;
     justify-content: center;
     list-style-type: none;
     color: var(--branco-principal);
     margin: 5em 0;
 }
-.lista_itens{
+
+.lista_itens {
     font-size: 32px;
     color: var(--branco-principal);
 }
-.rodape{
+
+.rodape {
     text-align: center;
     margin: 5em 3em;
 }
-.roda_lista{
+
+.roda_lista {
     display: flex;
     justify-content: center;
     list-style-type: none;
     margin-top: 1em;
 }
-.lista_link a{
+
+.lista_link a {
     text-decoration: none;
     color: var(--branco-principal);
     margin-left: 1em;
 }
+
 .rodape_texto {
     margin: 1em 0;
     color: var(--cinza-secudario);
     font-size: 14px;
 }
-.lista_link a:hover{
+
+.lista_link a:hover {
     color: var(--butao-azul);
 }
-.lista_link a:active{
+
+.lista_link a:active {
     color: powderblue;
 }
-.conteiner_butao:hover{
+
+.conteiner_butao:hover {
     background-color: var(--butao_efeito);
-    color: var(--cor-de-fundo)
+    color: var(--cor-de-fundo);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1200px) {
+    .conteiner {
+        display: flex; /* Alterado para flex */
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .conteiner_caixa {
+        width: auto;
+        margin: 0 2em; /* Ajustado para menos margem em telas pequenas */
+    }
+}
+
+@media (max-width: 600px) {
+    .conteiner_titulo {
+        font-size: 20px; /* Ajuste para tamanhos menores */
+    }
+
+    .descricao_titulo {
+        font-size: 32px; /* Ajuste para tamanhos menores */
+    }
+
+    .lista_itens {
+        font-size: 24px; /* Ajuste para tamanhos menores */
+    }
+
+    .rodape {
+        margin: 3em 1em; /* Ajuste para margens menores */
+    }
 }
